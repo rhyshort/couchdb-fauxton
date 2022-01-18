@@ -12,16 +12,13 @@
 
 import React from 'react';
 import ReactDOM from "react-dom";
-import ace from "brace";
 
-require('brace/ext/static_highlight');
-const highlight = ace.acequire('ace/ext/static_highlight');
+const highlight  = require('ace-builds/src-min-noconflict/ext-static_highlight');
 
-require('brace/mode/json');
-const JavaScriptMode = ace.acequire('ace/mode/json').Mode;
+require('ace-builds/src-min-noconflict/mode-json');
+const JavaScriptMode = require('ace-builds/src-min-noconflict/mode-javascript').Mode;
 
-require('brace/theme/idle_fingers');
-const theme = ace.acequire('ace/theme/idle_fingers');
+const theme = require('ace-builds/src-noconflict/theme-idle_fingers');
 
 export default class SplitScreenArea extends React.Component {
 
